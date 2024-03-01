@@ -12,7 +12,7 @@ let lastTime =null;
 function update(currentTime) {
     if (lastTime !== null) {
         const delta = (currentTime - lastTime)  
-   //ball.update(delta,[player.rect(),comp.rect()]); 
+    ball.update(delta,[player.rect(),comp.rect()]); 
         comp.update(delta,ball.y);
          const hue = parseFloat(
       getComputedStyle(document.documentElement).getPropertyValue("--hue")
