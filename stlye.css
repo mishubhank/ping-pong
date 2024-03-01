@@ -1,0 +1,82 @@
+*,::after,::before{
+box-sizing: border-box;
+
+
+}
+:root{
+    --hue:200;
+    --saturation:50%;
+ --foreground-colour: hsl(var(--hue),(var(--saturation)),75%);
+--background-colour: hsl(var(--hue),var(--saturation),20%)
+}
+body{
+    margin: 0;
+ background-color:var(--background-colour);
+ overflow: hidden;
+
+}
+.paddle-left{
+    --position:50;
+   position: absolute;
+   left: 1vw;
+   width: 1vh;
+   top: calc(var(--position)*1vh);
+   transform: translateY(-50%);
+   height: 10vh;
+   background-color: aqua;
+
+
+
+}
+.paddle-right{
+--position: 50;
+    position: absolute;
+    right: 1vw;
+    width: 1vh;
+    top: calc(var(--position)*1vh);
+    transform: translateY(-50%);
+    height: 10vh;
+    background-color: aqua;
+
+}
+.ball {
+    --x: 50;
+    --y: 50;
+
+    position: absolute;
+    background-color: blue;
+    left: calc(var(--x) * 1vw);
+    top: calc(var(--y) * 1vh);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5vh;
+    height: 2.5vh;
+}
+.score
+{
+ 
+ display: flex;
+ justify-content: center;
+  font-weight: bold;
+  font-size:  7vh;
+  color: var(--foreground-colour)
+  
+}
+.my-score{
+    background-color: red;
+
+}
+.score>*{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 2vh;
+    margin: 1vh 0;
+    border-right: 0.5vh solid lightblue;
+    opacity: 0.5;
+
+}
+.score>:first-child{
+    text-align: right;
+
+
+}
